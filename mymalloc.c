@@ -87,7 +87,7 @@ void MyFree(void* ad)
         }
         else{
             pre=m;
-            m=m+*(m+1)+5;
+            m=m+*(int *)(m+1)+5;
             next=m+*(int *)(m+1)+5;
         }
     }

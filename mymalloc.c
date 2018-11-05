@@ -71,7 +71,7 @@ char* find_block(int s)
                 return NULL;
             }
         }
-        m=m+num+5;
+        m=*(int *)m+num+5;
     }
     return (m);
 }
@@ -88,7 +88,7 @@ void MyFree(void* ad)
         else{
             pre=m;
             m=m+*(m+1)+5;
-            next=m+*(int *)(m+1)+5;
+            next=*(int *)m+*(int *)(m+1)+5;
         }
     }
     if(*(adress+*(int *)(adress+1)+5)=='a'||*(adress+*(int *)(adress+1)+5)=='f')
